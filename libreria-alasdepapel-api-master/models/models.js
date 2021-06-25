@@ -3,7 +3,7 @@ const _ = require('underscore');
 
 module.exports = (wagner) => {
     mongoose.Promise = global.Promise;
-    mongoose.connect('mongodb://localhost:27017/library', {useUnifiedTopology: true, useNewUrlParser: true});
+    mongoose.connect('mongodump --uri mongodb+srv://abc12345678:abc12345678@cluster0.74pxw.mongodb.net/library', {useUnifiedTopology: true, useNewUrlParser: true});
 
     wagner.factory('db', () => mongoose);
     const User = require('./user.model');
