@@ -1,0 +1,41 @@
+<h1 class="text-center">{{createAction ? 'Registra un nuevo libro': 'Actualización de información'}}</h1>
+<form [formGroup]="formBook" method="post" (ngSubmit)="create()">
+    <div class="form-group d-flex flex-column">
+      <mat-form-field>
+        <mat-label>Titulo</mat-label>
+        <input matInput formControlName="title" required>
+        <mat-error *ngIf="title.touched && title.hasError('required')">Necesitas ingresar un titulo</mat-error>
+      </mat-form-field>
+      
+      <mat-form-field>
+        <mat-label>Descripción</mat-label>
+        <textarea matInput formControlName="description" required></textarea>
+        <mat-error *ngIf="description.touched && description.hasError('required')">Necesitas ingresar una descripción</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Precio</mat-label>
+        <input matInput formControlName="price" placeholder="$ 100.00" required>
+        <mat-error *ngIf="price.touched && price.hasError('required')">Necesitas ingresar un precio para el libro</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>URL de imagen</mat-label>
+        <input matInput formControlName="image" placeholder="http://image.com">
+      </mat-form-field>
+      
+      <mat-form-field>
+        <mat-label>Categoria</mat-label>
+        <select matNativeControl formControlName="category" required>
+            <option *ngFor="let category of categories" [value]="category._id">{{category.name}}</option>
+        </select>
+        <mat-error *ngIf="category.touched && category.hasError('required')">Necesitas seleccionar una categoria</mat-error>
+      </mat-form-field>
+
+    </div>
+
+    <button mat-raised-button color="{{createAction ? 'primary' : 'accent'}}" class="w-100 mt-2" type="submit">
+      {{createAction ? 'Registrar' : 'Actualizar'}}
+    </button>
+
+  </form>

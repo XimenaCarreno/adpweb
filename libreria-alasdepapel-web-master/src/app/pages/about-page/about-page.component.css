@@ -1,0 +1,37 @@
+@font-face {
+    font-family: RadleyRegular;
+    src: url('/assets/fonts/Radley-Regular.ttf');
+}
+
+.library-stand {
+    border-radius: 50px;
+}
+
+.card-titles {
+    font-weight: 800;
+}
+
+.card-links {
+    font-size: 14pt;
+}
+
+.book-style {
+    border-radius: 20px;
+}
+
+.info-card {
+    background-color: #F1DEC8;
+    border-radius: 20px;
+    height: 520px;
+}
+
+.card-title {
+    font-size: 32pt;
+    font-family: RadleyRegular;
+}
+
+.card-body {
+    font-family: RadleyRegular;
+    font-size: 20pt;
+    line-height: 1.3;
+}

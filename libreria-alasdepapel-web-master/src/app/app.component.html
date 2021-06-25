@@ -1,0 +1,43 @@
+<section class="main-body">
+    <mat-toolbar style="height: 128px; background-color: white; margin-right: 100px; border-radius: 60px;">
+        <img src="assets/logo.png" style="height: 128px;" class="ms-5">
+        <mat-toolbar style="border-radius: 20px; margin: 0 30px 0 30px;" class="toolbar-options d-flex justify-content-around">
+            <a mat-button routerLink="/inicio" routerLinkActive="is-active" class="navbar-button">Inicio</a>
+            <a mat-button routerLink="/categorias" routerLinkActive="is-active" class="navbar-button">Categorías</a>
+            <a mat-button routerLink="/preguntas" routerLinkActive="is-active" class="navbar-button">Preguntas frecuentes</a>
+            <a mat-button routerLink="/acerca" routerLinkActive="is-active" class="navbar-button">Acerca de</a>
+        </mat-toolbar>
+        <span class="toolbar-spacer"></span>
+        <button mat-icon-button class="me-5" (click)="login()" *ngIf="!session">
+            <mat-icon>login</mat-icon>
+        </button>
+        <button mat-icon-button class="me-5" *ngIf="session" [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="redirectToAdminPage()">Página de administrador</button>
+            <button mat-menu-item (click)="logout()">Cerrar sesión</button>
+        </mat-menu>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+    <div class="main-footer-1 text-white d-flex justify-content-around" style="background-color: #CB8286;">
+        <a mat-button href="mailto:libreriaalasdepapel@yahoo.com.mx">
+            <mat-icon>email</mat-icon>
+            libreriaalasdepapel@yahoo.com.mx
+        </a>
+        <a mat-button href="#">
+            <mat-icon>phone</mat-icon>
+            311-909-9201
+        </a>
+        <a mat-button href="#">
+            <mat-icon>place</mat-icon>
+            Brasilia No. 42-A. Colonia Ciudad del Valle. Tepic Nayarit.
+        </a>
+        <a mat-button href="https://www.facebook.com/LibreriaAlasdePapel" target="_blank">
+            <mat-icon>facebook</mat-icon>
+            Facebook
+        </a>
+    </div>
+    
+    <div class="main-footer-2 text-center text-white" style="background-color: #A54F4E;">
+        <p class="m-0 footer-text-2">Todos los derechos reservados. Alas de Papel 2021</p>
+    </div>
+</section>

@@ -1,0 +1,16 @@
+<div class="container">
+
+    <section class="w-100 my-5" *ngFor="let category of bookCategories">
+        <div class="d-flex justify-content-between">
+            <h1 class="card-titles">{{category.category.name}}</h1>
+            <a mat-button [routerLink]="category.category._id" style="font-style: italic;" class="text-muted card-links">Ver más >></a>
+        </div>
+        <div class="d-flex justify-content-around" *ngIf="category.books.length > 0">
+            <img *ngFor="let book of category.books" [src]="book.image" [alt]="book.title" (click)="viewBook(book)" class="img-fluid book-style" style="cursor: pointer;" height="282px" width="184px">
+        </div>
+        <div class="d-flex align-items-center justify-content-around" style="min-height: 282px; background-color: beige; border-radius: 40px;" *ngIf="category.books.length === 0">
+            <h1 class="no-books">No tenemos todavía libros registrados para esta categoría</h1>
+        </div>
+    </section>
+    
+</div>

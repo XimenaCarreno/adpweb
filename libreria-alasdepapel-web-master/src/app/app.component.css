@@ -1,0 +1,50 @@
+@font-face {
+    font-family: RadleyRegular;
+    src: url('/assets/fonts/Radley-Regular.ttf');
+}
+
+@font-face {
+    font-family: PromptMedium;
+    src: url('/assets/fonts/Prompt-Medium.ttf');
+}
+
+.main-body {
+    margin: 40px;
+    background-color: white;
+    border-radius: 60px;
+    padding: 10px 0 0 0;
+}
+
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+.toolbar-options {
+    height: 64px;
+    background-color: #FAF6F6;
+    margin-right: 100px;
+}
+
+.main-footer-1 {
+    padding: 10px 0;
+}
+
+.main-footer-2 {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    padding: 10px 0;
+}
+
+.footer-text-2 {
+    font-size: 8pt;
+}
+
+.navbar-button {
+    font-family: RadleyRegular, PromptMedium;
+    font-size: 16pt;
+}
+
+.is-active {
+    color: #CB8286;
+    font-size: 19pt;
+}

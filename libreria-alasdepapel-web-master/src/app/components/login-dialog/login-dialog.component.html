@@ -1,0 +1,22 @@
+<h1 class="text-center">Login</h1>
+<form [formGroup]="formLogin" method="post" (ngSubmit)="login()">
+    <div class="form-group d-flex flex-column">
+      <mat-form-field>
+        <input matInput formControlName="email" placeholder="Correo de acceso" required>
+        <mat-error *ngIf="email.touched && email.hasError('required')">Necesitas ingresar un nombre de usuario</mat-error>
+        <mat-error *ngIf="email.touched && email.hasError('email')">No es un correo valido</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput formControlName="password" placeholder="Ingrese su contraseña" [type]="hide ? 'password' : 'text'" required>
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <mat-error *ngIf="password.touched && password.hasError('required')">Necesitas ingresar tu contraseña</mat-error>
+        <mat-error *ngIf="password.touched && password.hasError('minlength')">Tu contraseña debe ser al menos de 6 caracteres</mat-error>
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="primary" class="w-100 mt-2" type="submit">
+      Ingresar
+    </button>
+
+  </form>

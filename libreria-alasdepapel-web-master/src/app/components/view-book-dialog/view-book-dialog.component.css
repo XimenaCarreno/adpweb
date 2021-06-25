@@ -1,0 +1,13 @@
+@font-face {
+  font-family: RadleyRegular;
+  src: url('/assets/fonts/Radley-Regular.ttf');
+}
+
+* {
+  font-family: RadleyRegular;
+  background-color: #FAF6F6;
+}
+
+.book-style {
+  border-radius: 20px;
+}

@@ -1,0 +1,32 @@
+@font-face {
+    font-family: PromptMedium;
+    src: url('/assets/fonts/Prompt-Medium.ttf');
+}
+
+.library-stand {
+    border-radius: 50px;
+}
+
+.card-titles {
+    font-weight: 800;
+}
+
+.card-links {
+    font-size: 14pt;
+}
+
+.book-style {
+    border-radius: 20px;
+}
+
+.info-card {
+    background-color: #F1DEC8;
+    border-radius: 20px;
+    height: 180px;
+}
+
+.pregunta-texto {
+    font-family: PromptMedium;
+    font-weight: 500;
+    font-size: 22pt;
+}

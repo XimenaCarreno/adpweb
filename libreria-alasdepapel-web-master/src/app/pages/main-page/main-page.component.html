@@ -1,0 +1,26 @@
+<div class="container">
+    <section class="my-4">
+        <img src="assets/logo3.jpg" alt="" class="img-fluid library-stand">
+    </section>
+
+    <section class="w-100 my-5">
+        <div class="d-flex justify-content-between">
+            <h1 class="card-titles">Novedades</h1>
+            <a mat-button routerLink="/categorias/new" style="font-style: italic;" class="text-muted card-links">Ver más >></a>
+        </div>
+        <div class="d-flex justify-content-around">
+            <img *ngFor="let book of lastBooks" [src]="book.image" [alt]="book.title" (click)="viewBook(book)" class="img-fluid book-style" style="cursor: pointer;" height="282px" width="184px">
+        </div>
+    </section>
+
+    <section class="w-100 my-5">
+        <div class="d-flex justify-content-between">
+            <h1 class="card-titles">Proximos eventos</h1>
+            <a mat-button href="https://www.facebook.com/LibreriaAlasdePapel" target="_blank" style="font-style: italic;" class="text-muted card-links">Ver más >></a>
+        </div>
+        <div class="w-100" style="max-height: 400px; overflow: hidden;">
+            <img src="assets/events.webp" alt="" class="img-fluid library-stand">
+        </div>
+    </section>
+    
+</div>
