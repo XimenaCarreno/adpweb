@@ -16,3 +16,11 @@
     border-radius: 20px;
 }
 
+.team-stand {
+    max-width: 300px;
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    font-size: 11pt; 
+    font-weight: 500;
+}
